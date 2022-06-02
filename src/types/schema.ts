@@ -242,3 +242,41 @@ export interface qiniuSchema {
     token: string
   }
 }
+
+// 友链表
+export interface friendLinkSchema {
+  req: {
+    id?: string
+    siteName: string,
+    siteLink: string,
+    groupId: string,
+    status: number,
+    page: number,
+    limit: number
+  }
+  res: {
+    _id: string,
+    siteName: string,
+    siteAvatar: string,
+    siteLink: string,
+    siteDescribe: string,
+    sort: number,
+    email: string,
+    groupId: string,
+    status: number, // 状态: 0: 申请中 1: 已通过 2: 未通过 -1: 已删除
+    createTime: Date,
+    updateTime: Date
+  }
+}
+
+// 友链分组
+export interface friendLinkGroupSchema {
+  req: never,
+  res: {
+    _id: string,
+    name: string,
+    sort: number,
+    createTime: Date,
+    updateTime: Date
+  }
+}

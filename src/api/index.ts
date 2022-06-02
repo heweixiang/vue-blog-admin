@@ -8,6 +8,7 @@ import user from './user'
 import exportdb from './exportdb'
 import resetpwd from './resetpwd'
 import qiniu from './qiniu'
+import friendLink from './friendLink'
 
 export default {
   ...article,
@@ -19,5 +20,6 @@ export default {
   ...news,
   ...user,
   ...exportdb,
-  ...resetpwd
+  ...resetpwd,
+  ...friendLink
 }

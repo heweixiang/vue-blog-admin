@@ -20,6 +20,10 @@ onMounted(async () => {
   if (status === 200) {
     $store.commit('setCategories', data)
   }
+  const friendGroupList = await api.getFriendGroupList()
+  if(friendGroupList.status === 200) {
+    $store.commit('setFriendGroups', friendGroupList.data)
+  }
 })
 </script>
 

@@ -17,6 +17,7 @@ const news = () => import('@/views/News/mp-news.vue')
 const doc = () => import('@/views/Write/mp-doc.vue')
 const pwd = () => import('@/views/System/mp-pwd.vue')
 const exportdb = () => import('@/views/System/mp-exportdb.vue')
+const friendLinkManage = () => import('@/views/friendLink/mp-friendLinkManage.vue')
 interface metaType {
   meta?: meta
 }
@@ -116,6 +117,27 @@ const routes: Array<RouteRecordRawStrict> = [
         meta: {
           name: '留言',
           icon: 'el-icon-chat-line-round'
+        }
+      }
+    ]
+  },
+  // 友链管理
+  {
+    path: '/view',
+    component: MpLayout,
+    meta: {
+      name: '友链管理',
+      icon: '',
+      asTopMenu: false
+    },
+    children: [
+      {
+        path: 'friendLinkManage',
+        name: 'friendLinkManage',
+        component: friendLinkManage,
+        meta: {
+          name: '友链',
+          icon: 'el-icon-link'
         }
       }
     ]
